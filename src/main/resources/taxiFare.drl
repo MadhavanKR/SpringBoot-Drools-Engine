@@ -1,0 +1,12 @@
+global com.example.drool.drooltrial.model.Fare rideFare;
+
+import com.example.drool.drooltrial.model.TaxiRide;
+dialect  "java"
+
+rule "Calculate Taxi Fare - Scenario 1"
+    when
+        taxiRideInstance:TaxiRide(isNightSurcharge == false, distanceInMile < 11);
+    then
+        rideFare.setNightSurcharge(0);
+        rideFare.setRideFare(70);
+end
