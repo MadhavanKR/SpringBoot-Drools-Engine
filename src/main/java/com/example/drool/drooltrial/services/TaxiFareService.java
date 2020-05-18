@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TaxiFareService {
 
-    @Autowired
+    //@Autowired
     private KieContainer kieContainer;
 
     public Fare calculateFare(TaxiRide taxiRide) {

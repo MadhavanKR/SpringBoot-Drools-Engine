@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: v1.0.0
+      author: Madhavan K R
+      comments: initial schema
+      changes:
+        - tagDatabase:
+            tag: v1.0.0
+        - sqlFile:
+            path: tables.sql
+            relativeToChangelogFile: true
+        - rollback:
+            changes:
+              - sqlFile:
+                  path: rollback.sql
+                  relativeToChangelogFile: true
